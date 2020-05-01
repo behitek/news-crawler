@@ -31,5 +31,5 @@ def crawl(url):
 
 if __name__ == '__main__':
     res = crawl(
-        'https://tuoitre.vn/phap-phat-hien-mot-so-tre-mac-hoi-chung-la-nghi-lien-quan-covid-19-20200430061221813.htm')
+        'https://vnexpress.net/12-000-nguoi-do-ve-cua-lo-4092705.html')
     print(res)
