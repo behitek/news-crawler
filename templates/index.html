@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="https://nguyenvanhieu.vn/wp-content/uploads/2020/02/favicon-16-16.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>News Crawler - Lập Trình Không Khó</title>
+</head>
+<body>
+<h1 style="text-align: center; margin-top: 50px;">Demo thu thập dữ liệu site tin tức</h1>
+<p style="text-align: center; font-style: italic">Thu thập dữ liệu của bất kỳ trang tin tức nào không phân biệt ngôn ngữ</p>
+<div class="container" style="margin-top: 50px;">
+    <form action="" method="post">
+        <div class="row">
+            <div class="col-xs-2"></div>
+            <div class="col-xs-8">
+                <div class="form-group">
+                    <label for="url">Nhập URL bài báo</label>
+                    <input class="form-control" id="url" name="url"
+                           required
+                           placeholder="https://vnexpress.net/nhung-chinh-sach-co-hieu-luc-tu-thang-5-4092558.html"/>
+                </div>
+                <input type="submit" class="btn-lg btn-success btn">
+            </div>
+            <div class="col-xs-2"></div>
+        </div>
+    </form>
+    <div class="row result" style="margin-top: 50px;">
+        <div class="col-xs-2"></div>
+        <div class="col-xs-8">
+            {%if error %}
+            <h2>{{error}}</h2>
+            {% endif %}
+
+            {%if title %}
+
+            <h2 style="max-width: 670px;"><a href="{{url}}" target="_blank">{{title}}</a></h2>
+
+            {%if published_date %}
+            <p style="font-style: italic;">Ngày đăng: {{published_date}}</p>
+            {% endif %}
+
+            <div class="img" style="margin-bottom: 20px;margin-top: 20px;"><img style="width: 670px;" src="{{top_img}}"
+                                                                                alt=""></div>
+
+            <div class="content" style="text-align: justify; max-width: 670px; font-size: 16px;">
+                {{content|safe}}
+            </div>
+
+            {%if keywords %}
+            <p style="margin-top: 20px; max-width: 670px;"><strong>Từ khóa:</strong> {{keywords}}</p>
+            {% endif %}
+            {% endif %}
+        </div>
+        <div class="col-xs-2"></div>
+    </div>
+</div>
+<footer style="text-align: center;margin-top:50px;height: 50px;width: 100%;">
+    <p style="line-height: 50px;">Một bài chia sẻ kiến thức của <a href="//nguyenvanhieu.vn">Lập Trình Không Khó</a></p>
+</footer>
+</body>
+</html>
