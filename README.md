@@ -1,4 +1,4 @@
-![](https://nguyenvanhieu.vn/wp-content/uploads/2020/05/thu-thap-du-lieu-tin-tuc.png)
+![](https://nguyenvanhieu.vn/wp-content/uploads/2020/05/thu-thap-du-lieu-website.jpg)
 
 ### Demo link
 
